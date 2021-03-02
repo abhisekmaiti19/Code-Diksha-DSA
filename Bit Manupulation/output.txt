@@ -1,0 +1,4 @@
+right shft
+5
+left shift operater
+84

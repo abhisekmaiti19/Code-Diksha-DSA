@@ -1,0 +1,6 @@
+5 -> 4 -> 100 -> 3 -> 2 -> 6 -> 1 -> NULL
+before delete at head
+4 -> 100 -> 3 -> 2 -> 6 -> 1 -> NULL
+delete at tail
+4 -> 100 -> 3 -> 2 -> 6 -> NULL
+Your Linklist size is = > 5
