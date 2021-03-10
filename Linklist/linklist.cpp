@@ -23,7 +23,8 @@ public:
 // 			|
 // 			|
 // 			|
-// 			\/
+// 		   \  /
+//          \/
 
 
 // void insertathead(ListNode* head, int data)
@@ -89,7 +90,7 @@ void insertattail(ListNode* &head, int data)
 	if(head==NULL)
 	{
 		//no node inside the linked list
-		// no difference between inser at head and tail
+		// no difference between insert at head and tail
 
 		insertathead(head, data);
 		return;
