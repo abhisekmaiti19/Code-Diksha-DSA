@@ -3,8 +3,7 @@ using namespace std;
 
 class ListNode
 {
-private:
-	int x;
+
 public:
 	int val;
 	ListNode* next;
@@ -16,7 +15,7 @@ public:
 	}
 };
 
-// in data structure our work is insert search and delete
+// in data structure our work is "insert search and delete"
 
 // insert(head,5) ----> void insert(ListNode* head, </ here new head is created like temporary variable created in different memory address>)
 // 			|
