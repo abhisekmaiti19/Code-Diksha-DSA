@@ -3,6 +3,8 @@ using namespace std;
 
 class ListNode
 {
+private:
+	int x;
 public:
 	int val;
 	ListNode* next;
