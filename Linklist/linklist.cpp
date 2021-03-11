@@ -182,7 +182,48 @@ void deleteatTail (ListNode* head)
 
 }
 
+bool search(ListNode* head, int key)
+{
+	ListNode* temp =head;
+	while(temp!=NULL)
+	{
+		if(temp->val == key)
+		{
+			return true;
+		}
+		temp = temp->next;
+	}
 
+	return false;
+}
+
+void deleteatanyindex(ListNode* &head, int pos)
+{
+	if(pos == 1 or size(head)<=1)
+	{
+		deleteathead(head);
+		return;
+	}
+	if(pos>=size(head))
+	{
+		deleteatTail(head);
+	}
+
+	ListNode* temp = head;
+
+	int jump = 1;
+
+	while(jump<pos-1)
+	{
+		temp = temp->next;
+		jump++;
+	}
+
+	ListNode* toBedeleted = temp->next;
+	temp->next = temp->next->next;
+	delete toBedeleted;
+
+}
 
 void display(ListNode* head)
 {
@@ -238,6 +279,10 @@ int main()
 	deleteatTail(head);
 	display(head);
 	cout<<"Your Linklist size is = > "<< size(head) << endl;
+	deleteatanyindex(head,2);
+	display(head);
+	deleteatanyindex(head,1);
+	display(head);
 
 
 	return 0;
