@@ -6,3 +6,7 @@ delete at tail
 Your Linklist size is = > 5
 4 -> 3 -> 2 -> 6 -> NULL
 3 -> 2 -> 6 -> NULL
+my mid point is  2
+3 -> 2 -> 6 -> 7 -> 8 -> NULL
+my mid point is  6
+8 -> 7 -> 6 -> 2 -> 3 -> NULL

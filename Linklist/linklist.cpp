@@ -225,6 +225,32 @@ void deleteatanyindex(ListNode* &head, int pos)
 
 }
 
+ListNode* midpoint(ListNode* head)
+{
+	ListNode* slow = head;
+	ListNode* fast = head;
+	while(fast->next != NULL and fast->next->next != NULL)
+	{
+		slow = slow->next;
+		fast = fast->next->next;
+	}
+	return slow;
+} 
+
+ListNode* recursiveReverse(ListNode* head)
+{
+	if(head == NULL or head->next == NULL )
+	{
+		return head;
+	}
+
+	ListNode* newhead = recursiveReverse(head->next);
+	ListNode* curr = head;
+	curr->next->next = curr;
+	curr->next = NULL;
+	return newhead;
+}
+
 void display(ListNode* head)
 {
 	// the head inside this function is copy of the head
@@ -283,6 +309,22 @@ int main()
 	display(head);
 	deleteatanyindex(head,1);
 	display(head);
+	ListNode* mid = midpoint(head);
+	cout<<"my mid point is  "<<mid->val<<endl;
+
+	insertattail(head,7);
+	insertattail(head,8);
+	display(head);
+
+	mid = midpoint(head);
+	cout<<"my mid point is  "<<mid->val<<endl;
+	
+	head = recursiveReverse(head);
+
+	display(head);
+
+		
+	
 
 
 	return 0;
