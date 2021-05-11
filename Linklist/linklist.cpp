@@ -268,6 +268,47 @@ ListNode* iterativeReverse(ListNode* head)
 	return prev;
 }
 
+//////Create a merged linklist in order of sorted manner
+// 1->3->5->6->8 and if 2->4->7 to merged the manupulate older one and it should be 1->2->3->4->5->6->7->8->9
+// to be checked
+
+//home work leetcode sortlist 148 nlogn // merge sort
+
+
+// ListNode* meregedlinklist(ListNode* a, ListNode* b)
+// {
+// 	if( a== NULL )
+// 	{
+// 		return a;
+// 	}
+// 	if(b == NULL )
+// 	{
+// 		return b;
+// 	}
+
+// 	ListNode* newhead;
+
+// 	if(a->val < b->val)
+// 	{
+// 		newhead = a;
+// 		newhead -> next = meregedlinklist(a->next, b);
+// 	} else {
+
+// 		newhead = b;
+// 		newhead->next = meregedlinklist(a,b->next);
+// 	}
+
+
+// }
+
+//what is k reverse, suppose K=3 and your given linklist 1 - 2 - 3 || - 4 - 5 - 6 ||  -7 - 8 - 9 || ->k = 3
+// 3 - 1 - 1 - 6 - 5 - 4 - 8 -7 
+//ListNode* kReverse()// medium level -> do try
+//reverse nodes in k group - leet code
+//linked list cycle - leet code homework
+//linklist cycle two
+
+
 void display(ListNode* head)
 {
 	// the head inside this function is copy of the head
