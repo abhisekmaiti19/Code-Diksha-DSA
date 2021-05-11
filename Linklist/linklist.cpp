@@ -251,6 +251,23 @@ ListNode* recursiveReverse(ListNode* head)
 	return newhead;
 }
 
+ListNode* iterativeReverse(ListNode* head)
+{
+
+	ListNode* prev = NULL;
+	ListNode* curr = head;
+
+	while(curr != NULL)
+	{
+		ListNode* n = curr->next;
+		curr->next = prev;
+		prev = curr;
+		curr = n;
+	}
+
+	return prev;
+}
+
 void display(ListNode* head)
 {
 	// the head inside this function is copy of the head
@@ -320,6 +337,10 @@ int main()
 	cout<<"my mid point is  "<<mid->val<<endl;
 	
 	head = recursiveReverse(head);
+
+	display(head);
+
+	head = iterativeReverse(head);
 
 	display(head);
 
